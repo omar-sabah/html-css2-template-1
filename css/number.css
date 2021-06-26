@@ -1,0 +1,36 @@
+/* 3.5- number Section */
+.number {
+    /* بالنسبة لدف التغطية السوداء overlay  */
+    position: relative;
+    background-image: url('../images/background/background2.webp');
+    height: 300px;
+    /* هنا افكت تحريك الظل على طول الصورة */
+    /* هنا نضع الصورة بالكامل كخلفية للصحفة */
+    background-size: cover;
+    /* هنا يخلي الصحفة ثابتة والمرور عليها كسكرول */
+    background-attachment: fixed;
+
+}
+
+.numbers-item {
+    padding: 100px 0;
+}
+
+.number-item {
+    width: 25%;
+    text-align: center;
+}
+
+.number-item .icon {
+    color: var(--mainColor);
+}
+
+.number-item-title {
+    color: var(--whiteColor);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.number-item-text {
+    color: var(--whiteColor);
+}

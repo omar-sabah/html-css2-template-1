@@ -1,0 +1,78 @@
+/* 3.7- Pricing-Section */
+
+
+.pricing-plans {
+    /* حل مشكلة الفلوت للاباء */
+}
+
+.pricing-item {
+    width: 30%;
+    padding: 40px;
+    border: 1px solid #e8e8e8;
+    text-align: center;
+}
+
+.pricing-item.mg {
+    margin: 0 5%;
+}
+
+.pricing-item-text {
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+    color: var(--grayColor);
+    transition: color .5s;
+}
+
+.pricing-item-permonth {
+    width: 130px;
+    height: 130px;
+    /* لتوسيط المحتوى عاموديا  */
+    padding: 20px 0;
+    margin: 20px auto;
+    border: 2px solid var(--mainColor);
+    border-radius: 50%;
+    transition: color .5s;
+}
+
+.pricing-item-permonth .dollar {
+    font-size: 50px;
+}
+
+.pricing-item-permonth .month {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.pricing-list {
+    list-style: none;
+
+}
+
+.pricing-list li {
+    color: var(--grayColor);
+    line-height: 1.8;
+
+}
+
+.pricing-item-purchase {
+    border: 0;
+    background: none;
+    display: block;
+    width: 140px;
+    margin: 15px auto 0 auto;
+    padding: 10px;
+    border: 1px solid var(--mainColor);
+    color: var(--mainColor);
+
+}
+
+
+.pricing-item:hover .pricing-item-permonth {
+    color: var(--whiteColor);
+}
+
+.pricing-item:hover .pricing-item-text {
+    color: var(--mainColor);
+}

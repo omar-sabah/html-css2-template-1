@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="learn html and css">
+    <meta name="keywords" content="html css html5 css3">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- it's important for search engane مهم في محركات البحث -->
+    <title>HTML CSS Template 1 </title>
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Varela+Round&display=swap"
+        rel="stylesheet"> -->
+    <!-- css files -->
+    <!-- 
+            https://fontawesome.com/v4.7/
+            https://fontawesome.com/v4.7/icons/
+            <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">  //cdn--omsa--
+     -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/post.css">
+</head>
+
+<body>
+    <!--Post-Header Section -->
+    <div class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Header divided 2 part first div logo second ul links -->
+                <div class="logo float-left">
+                    <!-- alt جدا مهمة لمحركات البحث 
+                draggable="false" لمنع سحب الصورة من الموقع
+                -->
+                    <img src="./images/logo.webp" alt="logo iamge" draggable="false">
+                </div>
+
+                <ul class="nav float-left">
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Prices</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li class="dropdown">
+                        <a href="#">Blog</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="post.html">blog post</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+
+                </ul> <!-- ./end nav -->
+                <div class="clear"></div>
+                <!-- اول حل لمشكلة الاباء في الفلوت تم ايقافها حاليا واعتمدنا الحل الثاني-->
+            </div> <!-- ./end header-containt -->
+        </div> <!-- ./container -->
+    </div> <!-- ./End Post-Header Section -->
+
+    <!-- page-header-space-Section لعمل فراغ بين الهيدر والدف التالي-->
+    <div class="page-header-space"></div>
+
+    <!--Breadcrumbs-Section  -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs-content over-flow-hidden">
+                <div class="breadcrumbs-item float-left">
+                    <h2 class="breadcrumbs-title">blog spot</h2>
+                </div>
+                <div class="breadcrumbs-item float-right">
+                    <p class="breadcrumbs-desc">
+                        <a href="/">Home</a> /
+                        <a href="post.html">Blog</a> /
+                        <a href="post.html">Single Post</a>
+                    </p>
+                </div>
+            </div><!-- ./breadcrumbs-content -->
+        </div><!-- ./contaier -->
+    </div><!-- ./End Breadcrumbs-Section-->
+
+    <!-- Post-info Section -->
+    <section class="post-info">
+        <div class="container">
+            <div class="post-main-container">
+                <div class="post-img">
+                    <img src="./images/blog/blog1.webp" alt="post image">
+                </div><!-- ./post-img -->
+
+                <div class="publish-info">
+                    <span class="publish-type capitalize"><i class="icon fa fa-user fa-lg main-Color"></i>jhone
+                        doe</span>
+                    <span class="publish-type capitalize"><i class=" icon fa fa-clock-o fa-lg main-Color"></i>18
+                        Oct</span>
+                    <span class="publish-type capitalize"><i class=" icon fa fa-comments fa-lg main-Color"></i>57</span>
+                </div><!-- ./End publish-info -->
+
+                <div class="blog">
+                    <h2 class="blog-title m-b-20">Molestie at elementum eu facilisis sed odio</h2>
+                    <p class="blog-desc gray">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat est iusto repellat in
+                        voluptates quisquam ab sunt? Iste minima quae ut ad optio magni vero, possimus, amet nisi
+                        molestias quaerat perferendis similique. Ratione autem earum incidunt iure, vel dolorum sed
+                        magnam eligendi iste cumque officia excepturi, perspiciatis aspernatur perferendis
+                        exercitationem nisi id a assumenda suscipit.
+                    </p>
+                </div><!-- ./End blog -->
+
+                <div class="tags">
+                    <span class="tag-type-title capitalize">tags: </span>
+                    <span class="tag-type capitalize bg-gray"><i class="icon fa fa-tag fa-lg main-Color main-Color"></i>
+                        web</span>
+                    <span class="tag-type capitalize bg-gray"><i
+                            class="icon fa fa-tag fa-lg main-Color main-Color"></i>design</span>
+                    <span class="tag-type capitalize bg-gray"><i
+                            class="icon fa fa-tag fa-lg main-Color main-Color"></i>graphic</span>
+                    <span class="tag-type capitalize bg-gray"><i
+                            class="icon fa fa-tag fa-lg main-Color main-Color"></i>marketing</span>
+                    <span class="tag-type capitalize bg-gray"><i
+                            class="icon fa fa-tag fa-lg main-Color main-Color"></i>development</span>
+                    <span class="tag-type capitalize bg-gray"><i
+                            class="icon fa fa-tag fa-lg main-Color main-Color"></i>branding</span>
+                    <span class="tag-type capitalize bg-gray"><i
+                            class="icon fa fa-tag fa-lg main-Color main-Color"></i>photography</span>
+                </div><!-- ./End tags -->
+
+                <div class="social pd-y-40">
+                    <div class="profile-img float-left">
+                        <img src="images/Testimonial/perso2.webp" alt="">
+                    </div>
+                    <div class="profile-details float-left ">
+                        <h3 class="profile-details-title upercase float-left">johne doe</h3>
+                        <div class="share-links float-right ">
+                            <a href="#" class="bg-mainColor white"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="bg-mainColor white"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="bg-mainColor white"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="bg-mainColor white"><i class="fa fa-instagram"></i></a>
+                        </div>
+                        <div class="clear"></div><!-- للالغاء تأثير الفلوت -->
+                        <p class="profile-details-desc gray">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nisi illum mollitia, quia
+                            error enim distinctio culpa, neque ipsa, perferendis suscipit fugit natus consequatur
+                            fugiat.
+                        </p>
+                    </div>
+                    <div class="clear"></div><!-- للالغاء تأثير الفلوت -->
+                </div><!-- ./End social -->
+            </div><!-- post-main-container -->
+        </div><!-- ./container -->
+    </section><!-- ./End Post-info Section -->
+
+
+    <!-- Post-comments Section  -->
+    <section class="post-commetns pd-y-20">
+        <div class="container">
+            <div class="post-main-container">
+                <div class="post-section-header pd-y-40">
+                    <h2 class="post-section-title m-b-10">(13) comments</h2>
+                    <span class="line"></span>
+                </div> <!-- ./End sub-section-header -->
+                <div class="comment-border">
+                    <div class="post-comments-content">
+                        <div class="comment-profile-img float-left">
+                            <img src="images/Testimonial/perso2.webp" alt="">
+                        </div>
+                        <div class="comment-profile-details float-left ">
+                            <h3 class="comment-profile-details-title upercase float-left">johne doe <span
+                                    class="comment-profile-details-time percase gray">2
+                                    min ago</span></h3>
+                            <div class="comment-share-links float-right ">
+                                <a href="#" class="main-Color upercase">replay<i class="fa fa-reply"></i></a>
+                            </div>
+                            <div class="clear"></div><!-- للالغاء تأثير الفلوت -->
+                            <p class="comment-profile-details-desc gray">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nisi
+                                illum mollitia, quia
+                                error enim distinctio culpa, neque ipsa, perferendis suscipit fugit
+                                natus consequatur
+                                fugiat.
+                            </p>
+                        </div>
+                        <div class="clear"></div><!-- للالغاء تأثير الفلوت -->
+                    </div><!-- ./post-comments-content -->
+
+                    <div class="post-comments-content">
+                        <div class="comment-profile-img float-left">
+                            <img src="images/Testimonial/perso1.webp" alt="">
+                        </div>
+                        <div class="comment-profile-details float-left ">
+                            <h3 class="comment-profile-details-title upercase float-left">johne doe <span
+                                    class="comment-profile-details-time percase gray">2
+                                    min ago</span></h3>
+                            <div class="comment-share-links float-right ">
+                                <a href="#" class="main-Color upercase">replay<i class="fa fa-reply"></i></a>
+                            </div>
+                            <div class="clear"></div><!-- للالغاء تأثير الفلوت -->
+                            <p class="comment-profile-details-desc gray">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nisi
+                                illum mollitia, quia
+                                error enim distinctio culpa, neque ipsa, perferendis suscipit fugit
+                                natus consequatur
+                                fugiat.
+                            </p>
+                        </div>
+                        <div class="clear"></div><!-- للالغاء تأثير الفلوت -->
+                    </div><!-- ./post-comments-content -->
+                    <div class="post-comments-content">
+                        <div class="comment-profile-img float-left">
+                            <img src="images/Testimonial/perso2.webp" alt="">
+                        </div>
+                        <div class="comment-profile-details float-left ">
+                            <h3 class="comment-profile-details-title upercase float-left">johne doe <span
+                                    class="comment-profile-details-time percase gray">2
+                                    min ago</span></h3>
+                            <div class="comment-share-links float-right ">
+                                <a href="#" class="main-Color upercase">replay<i class="fa fa-reply"></i></a>
+                            </div>
+                            <div class="clear"></div><!-- للالغاء تأثير الفلوت -->
+                            <p class="comment-profile-details-desc gray">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nisi
+                                illum mollitia, quia
+                                error enim distinctio culpa, neque ipsa, perferendis suscipit fugit
+                                natus consequatur
+                                fugiat.
+                            </p>
+                        </div>
+                        <div class="clear"></div><!-- للالغاء تأثير الفلوت -->
+                    </div><!-- ./post-comments-content -->
+                    <div class="post-comments-content">
+                        <div class="comment-profile-img float-left">
+                            <img src="images/Testimonial/perso1.webp" alt="">
+                        </div>
+                        <div class="comment-profile-details float-left ">
+                            <h3 class="comment-profile-details-title upercase float-left">johne doe <span
+                                    class="comment-profile-details-time percase gray">2
+                                    min ago</span></h3>
+                            <div class="comment-share-links float-right ">
+                                <a href="#" class="main-Color upercase">replay<i class="fa fa-reply"></i></a>
+                            </div>
+                            <div class="clear"></div><!-- للالغاء تأثير الفلوت -->
+                            <p class="comment-profile-details-desc gray">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nisi
+                                illum mollitia, quia
+                                error enim distinctio culpa, neque ipsa, perferendis suscipit fugit
+                                natus consequatur
+                                fugiat.
+                            </p>
+                        </div>
+                        <div class="clear"></div><!-- للالغاء تأثير الفلوت -->
+                    </div><!-- ./post-comments-content -->
+                </div><!-- ./comment-border -->
+            </div><!-- ./post-main-container -->
+        </div><!-- ./container -->
+    </section><!-- ./ End Post-comments Section -->
+
+    <!-- Post-Reply Section  -->
+    <section class="leavreply">
+        <div class="container">
+            <div class="post-main-container">
+                <div class="post-section-header pd-y-40">
+                    <h2 class="post-section-title m-b-10">leave a reply</h2>
+                    <span class="line"></span>
+                </div> <!-- ./End sub-section-header -->
+                <form class="send-massege" action="">
+                    <div class="full-name pd-y-20">
+                        <input type="text" name="firstName" id="f-name" placeholder="First Name">
+                        <input type="text" name="lastName" id="f-name" placeholder="Last Name">
+                    </div>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Add Your Comment"></textarea>
+                    <input type="submit" value="Submit" class="btn-submit hover-opacity">
+                </form>
+            </div><!-- ./post-main-container -->
+        </div><!-- ./container -->
+    </section><!-- ./ End Post-Reply Section -->
+
+    <!-- هنا يبدأ جزء الجانبي للصفحة -->
+    <div class="blogpost-item blogpost-aside float-right">
+        <!-- aside-search -->
+        <div class="aside-search">
+            <input type="search" name="search" id="post-search" placeholder="search">
+            <i class="search-icon fa fa-search"></i>
+        </div><!-- ./aside-search -->
+
+        <!-- aside-category -->
+        <div class="aside-category">
+            <div class="sub-section-header m-y-30">
+                <h2 class="sub-section-title m-b-10">category</h2>
+                <span class="line"></span>
+            </div> <!-- ./End sub-section-header -->
+            <ul class="aside-category-list">
+                <li class="category-list-item"></li>
+                <li class="category-list-item  pd-y-10">web Design <span>(7)</span></li>
+                <li class="category-list-item  pd-y-10">marketing <span>(142)</span></li>
+                <li class="category-list-item  pd-y-10">web development <span>(74)</span></li>
+                <li class="category-list-item  pd-y-10">branding <span>(60)</span></li>
+                <li class="category-list-item  pd-y-10">photography <span>(5)</span></li>
+            </ul>
+        </div><!-- ./aside-category -->
+
+        <!-- aside-popular -->
+        <div class="aside-popular">
+            <div class="sub-section-header m-y-30">
+                <h2 class="sub-section-title m-b-10">populare posts</h2>
+                <span class="line"></span>
+            </div> <!-- ./End sub-section-header -->
+
+            <ul class="aside-populare-list">
+                <li class="populare-list-item overflow-hidden m-b-20">
+                    <div class="populare-item-img float-left">
+                        <img src="images/blog/blog1.webp" alt="blog post image">
+                    </div>
+                    <div class="populare-item-desc float-left">
+                        <p class="post-title">blog title goes here</p>
+                        <span class="post-date">Oct 18,2017</span>
+                    </div>
+                </li>
+                <li class="populare-list-item overflow-hidden m-b-20">
+                    <div class="populare-item-img float-left">
+                        <img src="images/blog/blog2.webp" alt="blog post image">
+                    </div>
+                    <div class="populare-item-desc float-left">
+                        <p class="post-title">blog title goes here</p>
+                        <span class="post-date">Oct 18,2017</span>
+                    </div>
+                </li>
+                <li class="populare-list-item overflow-hidden m-b-20">
+                    <div class="populare-item-img float-left">
+                        <img src="images/blog/blog3.webp" alt="blog post image">
+                    </div>
+                    <div class="populare-item-desc float-left">
+                        <p class="post-title">blog title goes here</p>
+                        <span class="post-date">Oct 18,2017</span>
+                    </div>
+                </li>
+            </ul> <!-- ./aside-populare-list -->
+
+        </div><!-- ./aside-populare -->
+
+        <!-- aside-tags -->
+        <div class="sub-section-header m-y-30">
+            <h2 class="sub-section-title m-b-10">tags</h2>
+            <span class="line"></span>
+        </div> <!-- ./End sub-section-header -->
+        <p>
+            <span class="tag-item">web</span>
+            <span class="tag-item">design</span>
+            <span class="tag-item">graphic</span>
+            <span class="tag-item">maketing</span>
+            <span class="tag-item">development</span>
+            <span class="tag-item">branding</span>
+            <span class="tag-item">photography</span>
+        </p>
+
+    </div> <!-- ./aside-tags -->
+    </div><!-- blogpost-aside -->
+
+</body>
+
+</html>

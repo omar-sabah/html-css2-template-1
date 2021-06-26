@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="learn html and css">
+    <meta name="keywords" content="html css html5 css3">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- it's important for search engane مهم في محركات البحث -->
+    <title>HTML CSS Template 1 </title>
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Varela+Round&display=swap"
+        rel="stylesheet"> -->
+    <!-- css files -->
+    <!-- 
+            https://fontawesome.com/v4.7/
+            https://fontawesome.com/v4.7/icons/
+            <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">  //cdn--omsa--
+     -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/portifolio.css">
+    <link rel="stylesheet" href="css/offer.css">
+    <link rel="stylesheet" href="css/service.css">
+    <link rel="stylesheet" href="css/number.css">
+    <link rel="stylesheet" href="css/pricing.css">
+    <link rel="stylesheet" href="css/testimonial.css">
+    <link rel="stylesheet" href="css/team.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!--Header Section -->
+    <div class="header">
+        <div class="container">
+            <div class="header-content">
+
+                <!-- Header divided 2 part first div logo second ul links -->
+                <div class="logo float-left">
+                    <!-- alt جدا مهمة لمحركات البحث 
+                draggable="false" لمنع سحب الصورة من الموقع
+                -->
+                    <img src="./images/logo-alt.webp" alt="logo iamge" draggable="false">
+                </div>
+
+                <ul class="nav float-left">
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Prices</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li class="dropdown">
+                        <a href="#">Blog</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="post.html">blog post</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+
+                </ul> <!-- ./end nav -->
+                <div class="clear"></div> <!-- اول حل لمشكلة الاباء في الفلوت تم ايقافها حاليا واعتمدنا الحل الثاني-->
+            </div> <!-- ./end header-containt -->
+        </div> <!-- ./end container -->
+    </div> <!-- ./End header -->
+
+    <!--Home Section -->
+    <div class="home">
+        <!-- لاضافة طبقة فوق خلفية القسم مع اظهار المحتوي -->
+        <div class="overlay">
+            <div class="home-content">
+                <h1 class="home-title">we are creative agency</h1>
+
+                <p class="home-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione perspiciatis enim adipisci eum ipsa
+                    perferendis vel corporis voluptatum quasi sed quo sit error.
+                </p>
+
+                <button class="btn home-btn-start hover-opacity">Get Started !</button>
+                <button class="btn home-btn-learn hover-opacity">Learn More</button>
+
+            </div><!-- ./End home-content -->
+        </div><!-- ./End overlay -->
+    </div><!-- ./End Home -->
+
+    <!-- هذا العنصر سوف يكرر في اكثر من قسم -->
+    <!-- <div class="section-header">
+        <h2 class="section-title">welcome to website</h2>
+        <span class="line"></span>
+    </div> <!-- ./End section-header --> -->
+
+    <!-- 3.2- About Section  -->
+    <div class="about pd-y overflow-hidden">
+        <div class="section-header m-b-20">
+            <h2 class="section-title m-b-10">welcome to website</h2>
+            <span class="line"></span>
+        </div> <!-- ./End section-header -->
+        <div class="container">
+            <div class="about-content">
+                <div class="about-item ltr-effect float-left">
+                    <i class="icon fa fa-cogs fa-2x m-b-10"></i>
+                    <h2 class="about-item-title m-b-10">fully costomizible</h2>
+                    <p class="about-item-desc m-b-10">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti atque
+                        quae, quos dignissimos
+                        harum sequi. Eius, repellat qui.
+
+                    </p>
+                    <a class="about-item-link" href="#">read more</a>
+                </div><!-- ./about-item -->
+
+                <div class="about-item ltr-effect mg float-left">
+                    <i class="icon fa fa-magic fa-2x m-b-10"></i>
+                    <h2 class="about-item-title m-b-10">awesome features </h2>
+                    <p class="about-item-desc m-b-10">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti atque
+                        quae, quos dignissimos
+                        harum sequi. Eius, repellat qui.
+
+                    </p>
+                    <a class="about-item-link" href="#">read more</a>
+                </div><!-- ./about-item -->
+
+                <div class="about-item ltr-effect float-left">
+                    <i class="icon fa fa-mobile fa-2x m-b-10"></i>
+                    <h2 class="about-item-title m-b-10">fully responsive</h2>
+                    <p class="about-item-desc m-b-10">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti atque
+                        quae, quos dignissimos
+                        harum sequi. Eius, repellat qui.
+                    </p>
+                    <a class="about-item-link" href="#">read more</a>
+                </div><!-- ./about-item -->
+            </div><!-- ./about-content -->
+        </div><!-- ./container -->
+    </div> <!-- ./End about -->
+
+    <!-- 3.3- Portifolio Section -->
+    <div class="portifolio pd-y bg-gray">
+        <div class="section-header m-b-20">
+            <h2 class="section-title">featured works</h2>
+            <span class="line"></span>
+        </div> <!-- ./End section-header -->
+        <div class="container">
+            <div class="portifolio-content overflow-hidden">
+                <div class="portifolio-item m-b-25 float-left">
+                    <img src="./images/work/work1.webp" alt="portifolio image1">
+                    <div class="layer-content">
+                        <div class="layer-info">
+                            <span class="category">category</span>
+                            <h3 class="layer-content-title">Lorem, ipsum dolor.</h3>
+                            <a href="#"> <i class="fa fa-edit"></i></a>
+                            <a href="#"><i class="fa fa-search"></i></a>
+                        </div><!-- ./layer-info -->
+                    </div><!-- ./layer-content -->
+                </div><!-- ./portifolio-item -->
+
+                <div class="portifolio-item mg m-b-25 float-left">
+                    <img src="./images/work/work2.webp" alt="portifolio image2">
+                    <div class="layer-content">
+                        <div class="layer-info">
+                            <span class="category">category</span>
+                            <h3 class="layer-content-title">Lorem, ipsum dolor.</h3>
+                            <a href="#"> <i class="fa fa-edit"></i></a>
+                            <a href="#"><i class="fa fa-search"></i></a>
+                        </div><!-- ./layer-info -->
+                    </div><!-- ./layer-content -->
+
+                </div><!-- ./portifolio-item -->
+
+                <div class="portifolio-item m-b-25 float-left">
+                    <img src="./images/work/work3.webp" alt="portifolio image3">
+                    <div class="layer-content">
+                        <div class="layer-info">
+                            <span class="category">category</span>
+                            <h3 class="layer-content-title">Lorem, ipsum dolor.</h3>
+                            <a href="#"> <i class="fa fa-edit"></i></a>
+                            <a href="#"><i class="fa fa-search"></i></a>
+                        </div><!-- ./layer-info -->
+                    </div><!-- ./layer-content -->
+                </div><!-- ./portifolio-item -->
+
+                <div class="portifolio-item m-b-25 float-left">
+                    <img src="./images/work/work4.webp" alt="portifolio image4">
+                    <div class="layer-content">
+                        <div class="layer-info">
+                            <span class="category">category</span>
+                            <h3 class="layer-content-title">Lorem, ipsum dolor.</h3>
+                            <a href="#"> <i class="fa fa-edit"></i></a>
+                            <a href="#"><i class="fa fa-search"></i></a>
+                        </div><!-- ./layer-info -->
+                    </div><!-- ./layer-content -->
+                </div><!-- ./portifolio-item -->
+
+                <div class="portifolio-item mg m-b-25 float-left">
+                    <img src="./images/work/work5.webp" alt="portifolio image5">
+                    <div class="layer-content">
+                        <div class="layer-info">
+                            <span class="category">category</span>
+                            <h3 class="layer-content-title">Lorem, ipsum dolor.</h3>
+                            <a href="#"> <i class="fa fa-edit"></i></a>
+                            <a href="#"><i class="fa fa-search"></i></a>
+                        </div><!-- ./layer-info -->
+                    </div><!-- ./layer-content -->
+                </div><!-- ./portifolio-item -->
+
+                <div class="portifolio-item m-b-25 float-left">
+                    <img src="./images/work/work6.webp" alt="portifolio image6">
+                    <div class="layer-content">
+                        <div class="layer-info">
+                            <span class="category">category</span>
+                            <h3 class="layer-content-title">Lorem, ipsum dolor.</h3>
+                            <a href="#"> <i class="fa fa-edit"></i></a>
+                            <a href="#"><i class="fa fa-search"></i></a>
+                        </div><!-- ./layer-info -->
+                    </div><!-- ./layer-content -->
+                </div>
+                <!-- ./portifolio-item -->
+            </div><!-- ./portifolio-content -->
+        </div><!-- ./container -->
+    </div><!-- ./End portifolio -->
+
+    <!-- 3.4-Offer-Sectoin -->
+    <div class="offer pd-y">
+        <div class="section-header m-b-20">
+            <h2 class="section-title">what we offer</h2>
+            <span class="line"></span>
+        </div> <!-- ./End section-header -->
+        <div class="container">
+            <div class="offer-content overflow-hidden">
+                <div class="offer-item ltr-effect m-b-20 float-left">
+                    <i class="icon fa fa-diamond fa-2x"></i>
+                    <h2 class="offer-item-title m-b-15">app development</h2>
+                    <p class="offer-item-desc m-b-15">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+                        ratione!
+                    </p>
+                </div><!-- ./offer-item -->
+                <div class="offer-item ltr-effect mg m-b-20 float-left">
+                    <i class="icon fa fa-rocket fa-2x"></i>
+                    <h2 class="offer-item-title m-b-15">graphic design</h2>
+                    <p class="offer-item-desc m-b-15">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Neque, ratione!
+                    </p>
+                </div><!-- ./offer-item -->
+
+                <div class="offer-item ltr-effect m-b-20 float-left">
+                    <i class="icon fa fa-cogs fa-2x"></i>
+                    <h2 class="offer-item-title m-b-15">creative idea</h2>
+                    <p class="offer-item-desc m-b-15">Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit. Neque, ratione!
+                    </p>
+                </div><!-- ./offer-item -->
+
+                <div class="offer-item ltr-effect m-b-20 float-left">
+                    <i class="icon fa fa-diamond fa-2x"></i>
+                    <h2 class="offer-item-title m-b-15">marketing</h2>
+                    <p class="offer-item-desc m-b-15">Lorem, ipsum dolor sit
+                        amet consectetur adipisicing elit. Neque,
+                        ratione!
+                    </p>
+                </div><!-- ./offer-item -->
+
+                <div class="offer-item ltr-effect mg m-b-20 float-left">
+                    <i class="icon fa fa-pencil fa-2x"></i>
+                    <h2 class="offer-item-title m-b-15">awesome support</h2>
+                    <p class="offer-item-desc m-b-15">Lorem,
+                        ipsum dolor sit amet consectetur
+                        adipisicing elit. Neque,
+                        ratione!
+                    </p>
+                </div><!-- ./offer-item -->
+
+                <div class="offer-item ltr-effect m-b-20 float-left">
+                    <i class="icon fa fa-flask fa-2x"></i>
+                    <h2 class="offer-item-title m-b-15">
+                        brand design
+                    </h2>
+                    <p class="offer-item-desc m-b-15">
+                        Lorem, ipsum
+                        dolor sit amet
+                        consectetur
+                        adipisicing
+                        elit. Neque,
+                        ratione!
+                    </p>
+                </div>
+                <!-- ./offer-item -->
+
+            </div><!-- ./offer-content -->
+        </div><!-- ./container -->
+    </div><!-- ./End Offer-Section -->
+
+    <!--  3.5- Services-Section  -->
+    <div class="service pd-y bg-gray">
+        <div class="container">
+            <div class="service-item float-left">
+                <div class="section-header m-b-20">
+                    <h2 class="section-title">welcome to website</h2>
+                    <span class="line"></span>
+                </div> <!-- ./End section-header -->
+                <p class="sevice-item-desc m-b-20">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, molestias quod expedita iste
+                    obcaecati aliquam, debitis illo veritatis maiores possimus, fuga eligendiExplicabo, molestias quod
+                    expedita iste obcaecati aliquam,.
+                </p>
+                <ul class="service-list">
+                    <li class="m-b-10">
+                        <i class="icon fa fa-check fa-fw"></i> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </li>
+                    <li class="m-b-10">
+                        <i class="icon fa fa-check fa-fw"></i> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </li>
+                    <li class="m-b-10">
+                        <i class="icon fa fa-check fa-fw"></i> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </li>
+                    <li class="m-b-10">
+                        <i class="icon fa fa-check fa-fw"></i> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </li>
+                    <li class="m-b-10">
+                        <i class="icon fa fa-check fa-fw"></i> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </li>
+                </ul><!-- .service-list -->
+            </div><!-- ./service-item -->
+
+            <div class="service-item float-left">
+                <div class="service-item-img">
+                    <img src="./images/about/about1.webp" alt="service image">
+                </div><!-- service-item-img -->
+                <ul class="service-bollets">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ul><!-- service-bollets -->
+            </div><!-- ./service-item -->
+            <div class="clear"></div> <!-- الحل الاول لمشكلة الفلوت وعدم تعرف الاب على الابناء -->
+        </div><!-- ./container -->
+
+    </div><!-- ./End Services-Section -->
+
+    <!-- 3.5- Number-Section -->
+    <div class="number">
+        <!-- دف التغطية السوداء وهو موجود لدينا -->
+        <div class="overlay">
+            <div class="container">
+                <div class="numbers-item overflow-hidden">
+                    <div class="number-item float-left">
+                        <i class="icon fa fa-users fa-2x m-b-15"></i>
+                        <h3 class="number-item-title">451</h3>
+                        <span class="number-item-text">Happy Client</span>
+                    </div>
+                    <div class="number-item float-left">
+                        <i class="icon fa fa-trophy fa-2x m-b-15"></i>
+                        <h3 class="number-item-title">451</h3>
+                        <span class="number-item-text">Happy Client</span>
+                    </div>
+                    <div class="number-item float-left">
+                        <i class="icon fa fa-coffee fa-2x m-b-15"></i>
+                        <h3 class="number-item-title">451K</h3>
+                        <span class="number-item-text">Happy Client</span>
+                    </div>
+                    <div class="number-item float-left">
+                        <i class="icon fa fa-file fa-2x m-b-15"></i>
+                        <h3 class="number-item-title">451</h3>
+                        <span class="number-item-text">Happy Client</span>
+                    </div>
+                </div><!-- ./numbers-item -->
+            </div><!-- .container -->
+        </div><!-- .overlay -->
+
+    </div><!-- ./Number-Section -->
+
+    <!-- 3.6-Pricing-Section -->
+    <div class="pricing pd-y">
+        <div class="section-header m-b-20">
+            <h2 class="section-title">pricing table</h2>
+            <span class="line"></span>
+        </div> <!-- ./End section-header -->
+        <div class="container">
+            <div class="pricing-plans overflow-hidden">
+                <div class="pricing-item tb-effect float-left">
+                    <span class="pricing-item-text">basic plan</span>
+                    <div class="pricing-item-permonth">
+                        <h3 class="dollar">$9</h3>
+                        <span class="month">/month</span>
+                    </div>
+                    <ul class="pricing-list">
+                        <li>1GB Disk Space</li>
+                        <li>100 Email Account</li>
+                        <li>24/24 Support</li>
+                    </ul>
+                    <button class="pricing-item-purchase">Purchase Now</button>
+                </div><!-- ./pricing-item -->
+
+                <div class="pricing-item mg tb-effect float-left">
+                    <span class="pricing-item-text">basic plan</span>
+                    <div class="pricing-item-permonth">
+                        <h3 class="dollar">$9</h3>
+                        <span class="month">/ month</span>
+                    </div>
+                    <ul class="pricing-list">
+                        <li>1GB Disk Space</li>
+                        <li>100 Email Account</li>
+                        <li>24/24 Support</li>
+                    </ul>
+                    <button class="pricing-item-purchase">Purchase Now</button>
+                </div><!-- ./pricing-item -->
+
+                <div class="pricing-item tb-effect float-left">
+                    <span class="pricing-item-text">basic plan</span>
+                    <div class="pricing-item-permonth">
+                        <h3 class="dollar">$9</h3>
+                        <span class="month">/month</span>
+                    </div>
+                    <ul class="pricing-list">
+                        <li>1GB Disk Space</li>
+                        <li>1GB Disk Space</li>
+                        <li>1GB Disk Space</li>
+                    </ul>
+                    <button class="pricing-item-purchase">Purchase Now</button>
+                </div><!-- ./pricing-item -->
+
+            </div><!-- ./pricing-plans -->
+        </div><!-- ./container -->
+    </div><!-- ./ End Pricing-Section -->
+
+    <!-- 3.8- Testimonail-Section اراء الناس -->
+    <div class="testimonail">
+        <div class="overlay">
+            <div class="container">
+                <div class="testimonail-content overflow-hidden">
+                    <div class="testimonail-item float-left">
+                        <div class="testimonail-toplayer">
+                            <img src="./images/Testimonial/perso1.webp" alt="testimonial image">
+                            <h3 class="testimonail-item-name">John Doe</h3>
+                            <span class="testimonail-item-work-title">Web Designer</span>
+                        </div><!-- ./testimonail-toplayer  -->
+                        <p class="testimonial-desc">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo architecto a quibusdam,
+                            vitae, officiis delectus natus similique suscipit quidem autem atque id eum reiciendis?
+                        </p>
+                    </div><!-- testimonail-item -->
+
+                    <div class="testimonail-item float-left">
+                        <div class="testimonail-toplayer">
+                            <img src="./images/Testimonial/perso2.webp" alt="testimonial image"
+                                class="testimonial-item-img">
+                            <h3 class="testimonail-item-name">Ethan Mark</h3>
+                            <span class="testimonail-item-work-title">Web Designer</span>
+                        </div><!-- ./testimonail-toplayer  -->
+                        <p class="testimonial-desc">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
+                            architecto a quibusdam,
+                            vitae, officiis delectus natus similique suscipit quidem autem atque id
+                            eum reiciendis?
+                        </p>
+                    </div><!-- testimonail-item -->
+
+
+                </div><!-- testimonail-content -->
+            </div><!-- .container -->
+        </div><!-- ./overlay -->
+    </div><!-- ./End testimonail-Section -->
+
+    <!-- 3.9- Team-Section -->
+    <div class="team pd-y">
+        <div class="section-header m-b-20">
+            <h2 class="section-title">our team</h2>
+            <span class="line"></span>
+        </div> <!-- ./End section-header -->
+        <div class="container">
+            <div class="team-content overflow-hidden">
+                <div class="team-item tb-effect float-left">
+                    <div class="team-item-img">
+                        <img src="./images/team/team1.webp" alt="person of team image">
+                        <div class="team-overlay">
+                            <!-- هذه طبقة عند التأشير على العنصر تظهر فوق الصورة -->
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div><!-- team-overlay -->
+                    </div><!-- team-item-img -->
+                    <div class="team-item-info">
+                        <h3 class="team-item-title">jhone Dueo</h3>
+                        <span class="team-item-text">web designer</span>
+                    </div><!-- team-item-info -->
+                </div><!-- team-item -->
+
+                <div class="team-item mg tb-effect float-left">
+                    <div class="team-item-img">
+                        <img src="./images/team/team2.webp" alt="person of team image">
+                        <div class="team-overlay">
+                            <!-- هذه طبقة عند التأشير على العنصر تظهر فوق الصورة -->
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div><!-- team-overlay -->
+
+                    </div><!-- team-item-img -->
+                    <div class="team-item-info">
+                        <h3 class="team-item-title">jhone Dueo</h3>
+                        <span class="team-item-text">web designer</span>
+                    </div><!-- team-item-info -->
+                </div><!-- team-item -->
+
+                <div class="team-item tb-effect float-left">
+                    <div class="team-item-img">
+                        <img src="./images/team/team3.webp" alt="person of team image">
+                        <div class="team-overlay">
+                            <!-- هذه طبقة عند التأشير على العنصر تظهر فوق الصورة -->
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div><!-- team-overlay -->
+
+                    </div><!-- team-item-img -->
+                    <div class="team-item-info">
+                        <h3 class="team-item-title">jhone Dueo</h3>
+                        <span class="team-item-text">web designer</span>
+                    </div><!-- team-item-info -->
+                </div><!-- team-item -->
+
+            </div><!-- team-content -->
+        </div><!-- ./container -->
+    </div><!-- ./End Team-Section -->
+
+    <!-- 3.10- Blog-section -->
+    <div class="blog pd-y bg-gray">
+        <div class="section-header m-b-20">
+            <h2 class="section-title">recent news</h2>
+            <span class="line"></span>
+        </div> <!-- ./End section-header -->
+        <div class="container">
+            <div class="blog-content overflow-hidden">
+                <div class="blog-item m-b-10 float-left">
+                    <div class="blog-item-img">
+                        <img src="./images/blog/blog1.webp" alt="blog image">
+                    </div><!-- ./blog-item-img -->
+                    <div class="blog-info">
+                        <ul class="blog-list">
+                            <li><i class="fa fa-user"></i>jhone doe</li>
+                            <li><i class="fa fa-clock-o"></i>18 Oct</li>
+                            <li><i class="fa fa-comments"></i>57</li>
+                        </ul><!-- ./blog-list -->
+                        <h3 class="blog-title">Molestie at elementum eu facilisis sed odio</h3>
+                        <p class="blog-desc m-b-10">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eum porro harum, vitae adipisci
+                            rem
+                            doloremque obcaecati quos deserunt minima?
+                        </p>
+                        <a href="#" class="blog-link">Read More</a>
+                    </div><!-- .blog-info -->
+                </div><!-- blog-item -->
+
+                <div class="blog-item mg m-b-10 float-left">
+                    <div class="blog-item-img">
+                        <img src="./images/blog/blog2.webp" alt="blog image">
+                    </div><!-- ./blog-item-img -->
+                    <div class="blog-info">
+                        <ul class="blog-list">
+                            <li><i class="fa fa-user"></i>jhone doe</li>
+                            <li><i class="fa fa-clock-o"></i>18 Oct</li>
+                            <li><i class="fa fa-comments"></i>57</li>
+                        </ul><!-- ./blog-list -->
+                        <h3 class="blog-title">Molestie at elementum eu facilisis sed odio</h3>
+                        <p class="blog-desc m-b-10">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eum porro harum, vitae adipisci
+                            rem
+                            doloremque obcaecati quos deserunt minima?
+                        </p>
+                        <a href="#" class="blog-link">Read More</a>
+                    </div><!-- .blog-info -->
+                </div><!-- blog-item -->
+
+                <div class="blog-item m-b-10 float-left">
+                    <div class="blog-item-img">
+                        <img src="./images/blog/blog3.webp" alt="blog image">
+                    </div><!-- ./blog-item-img -->
+                    <div class="blog-info">
+
+                        <ul class="blog-list">
+                            <li><i class="fa fa-user"></i>jhone doe</li>
+                            <li><i class="fa fa-clock-o"></i>18 Oct</li>
+                            <li><i class="fa fa-comments"></i>57</li>
+                        </ul><!-- ./blog-list -->
+                        <h3 class="blog-title">Molestie at elementum eu facilisis sed odio</h3>
+                        <p class="blog-desc m-b-10">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eum porro harum, vitae adipisci
+                            rem
+                            doloremque obcaecati quos deserunt minima?
+                        </p>
+                        <a href="#" class="blog-link">Read More</a>
+                    </div><!-- .blog-info -->
+                </div><!-- blog-item -->
+            </div><!-- ./blog-content -->
+        </div><!-- ./container -->
+    </div><!-- ./End Blog-section -->
+
+    <!-- 3.11- Contact-Section -->
+    <div class="contact pd-y">
+        <div class="section-header m-b-20">
+            <h2 class="section-title">get in touch</h2>
+            <span class="line"></span>
+        </div> <!-- ./End section-header -->
+        <div class="container">
+            <div class="contact-content overflow-hidden">
+                <div class="contact-item float-left">
+                    <i class="icon fa fa-phone fa-2x"></i>
+                    <h3 class="contact-item-title">phone</h3>
+                    <span class="contact-item-text">512-412-3940</span>
+                </div><!-- ./contact-item -->
+                <div class="contact-item mg float-left">
+                    <i class="icon fa fa-envelope fa-2x"></i>
+                    <h3 class="contact-item-title">email</h3>
+                    <span class="contact-item-text">email@support.com</span>
+                </div><!-- ./contact-item -->
+                <div class="contact-item float-left">
+                    <i class="icon fa fa-map-marker fa-2x"></i>
+                    <h3 class="contact-item-title">address</h3>
+                    <span class="contact-item-text">1739 Bubby Drive</span>
+                </div><!-- ./contact-item -->
+            </div><!-- ./contact-content -->
+            <form action="" class="contact-form">
+                <div class="contact-form-psinfo">
+                    <input type="text" name="" id="" placeholder="Name">
+                    <input type="email" name="" id="" placeholder="Email">
+                </div><!-- ./contact-form-psinfo -->
+                <input type="text" name="" id="" placeholder="Subject">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                <input type="submit" value="Send message" class="btn-submit hover-opacity">
+            </form>
+        </div><!-- ./container -->
+    </div><!-- ./End Contact-Section -->
+
+    <!-- 3.12- Footer-Section -->
+    <div class="footer">
+        <div class="logo">
+            <img src="./images/logo-alt.webp" alt="logo iamge" draggable="false">
+        </div>
+        <div class="container">
+            <ul class="footer-links">
+                <li class="hover-opacity"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li class="hover-opacity"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li class="hover-opacity"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li class="hover-opacity"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li class="hover-opacity"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li class="hover-opacity"><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul><!-- ./footer-list -->
+        </div><!-- ./container -->
+        <p class="copyright">
+            copyright &copy; 2021 allrights reseaved designed by <span>colorlib</span>
+        </p>
+    </div><!-- ./End Footer-Section -->
+</body>
+
+</html>

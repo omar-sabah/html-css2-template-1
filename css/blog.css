@@ -1,0 +1,66 @@
+/*3.10- Blog-section*/
+
+.blog {
+    position: relative;
+}
+
+.blog-content {}
+
+.blog-item {
+    width: 30%;
+    background-color: var(--whiteColor);
+    margin: auto;
+}
+
+.blog-item.mg {
+    margin: 0 5%;
+}
+
+.blog-item .blog-item-img {
+    margin: auto;
+}
+
+.blog-item .blog-item-img img {
+    width: 100%;
+}
+
+/* حاضنة البيانات في العنصر */
+.blog-item .blog-info {
+    padding: 20px;
+}
+
+.blog-item .blog-list {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.blog-item .blog-list li {
+    display: inline-block;
+    margin: 0 5px;
+
+}
+
+.blog-item .blog-list li i {
+    color: var(--mainColor);
+    padding-right: 3px;
+
+}
+
+.blog-item .blog-title {
+    /* font-size: 17px; */
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.blog-item .blog-desc {
+    line-height: 1.6;
+    color: var(--grayColor);
+}
+
+.blog-item .blog-link {
+    /* display: block;
+    text-transform: capitalize;
+    font-size: 17px; */
+    color: var(--mainColor);
+    /* padding: 10px 10px 20px 10px; */
+}

@@ -1,0 +1,168 @@
+/*  3.0- Header Section */
+.header {
+    /* background: gray;  */
+    /* position: fixed,absolute  يحولوا العنصرمن بلوك الى انلاين بلوك فينكمش العنر يحتاج نعطيه عرض مئة بالمئة */
+    position: fixed;
+    width: 100%;
+    /* هنا عنصر الهيدر اصبح خلف عنصر الهوم يجب اخراجه عليه */
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+/* الحل الثاني لمشكلة عدم تعرف الاب على ابناء الذين ياخذون فلوت */
+.header-content {
+    /*  overflow: hidden; */
+}
+
+.header .logo {
+    width: 40%;
+}
+
+.header .logo img {
+    width: 20%;
+    margin-top: 10px;
+}
+
+.header .nav {
+    width: 60%;
+    /* الغاء الستايل الديفلت من ul */
+    list-style: none;
+    text-align: right;
+}
+
+.header .nav>li {
+    display: inline-block;
+    /* width: 85px; */
+    text-align: right;
+    margin-right: 1px;
+
+}
+
+.header .nav>li>a {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--whiteColor);
+    /* لتشغيل الاعلى والاسفل في البادنج */
+    display: block;
+    padding: 30px 15px;
+}
+
+/* عمل افكت الخط الازرق عند التأشير على اي عنصر في القائمة */
+.header .nav>li>a.active:after,
+.header .nav>li>a:after {
+    content: "";
+    display: block;
+    /* اهم نقطة لانة العناصر في الافتر وبالفور تكون انلاين يجب تحويلها حتى تظهر */
+    height: 3px;
+    /* سمك الخط */
+    background-color: var(--mainColor);
+    margin-top: 2px;
+    transition: width .5s;
+}
+
+.header .nav>li>a:after {
+    width: 0;
+}
+
+/* نثبت الخط ديفلت لعنصر الهوم Home */
+.header .nav>li>a.active:after,
+.header .nav>li>a:hover:after {
+    width: 100%;
+    /* عرض الخط على عرض العنصر */
+}
+
+/* drop down list  */
+.dropdown {
+    position: relative;
+
+}
+
+.dropdown .dropdown-menu {
+    list-style: none;
+    position: absolute;
+    border: 1px solid var(--mainColor);
+    border-radius: 4px;
+    width: 110px;
+    text-align: center;
+    left: -36%;
+    top: 72%;
+    /* لاخفاء هذه القائمة عند اول التشغيل */
+    opacity: 0;
+    /* لاخفاء العنصر */
+    visibility: hidden;
+    /* لازالة مكانه المحجوز في الصفحة */
+    transition: opacity .5s, visibility .5s;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: var(--whiteColor);
+    text-align: center;
+    padding: 10px;
+    transition: all .5s;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(97, 149, 255, .7);
+    color: var(--whiteColor);
+}
+
+/* الاظهار القائمة الفرعية عند الوقوف على العنصر */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 3.1- Home Section */
+
+.home {
+    /* نريد يمثل 100 بالمئة من المنظور الطولي للشاشة تبعك */
+    height: 100vh;
+    background-image: url(../images/background/background1.webp);
+    /* لتوسيط المحتوى كخلفية */
+    background-size: cover;
+    /* نجعله كـ اب */
+    position: relative;
+}
+
+.home-content {
+    width: 65%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.home-title {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: var(--whiteColor);
+
+}
+
+.home-description {
+    margin: 20px 0;
+    color: var(--whiteColor);
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.home .btn {
+    min-width: 160px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.home .home-btn-start {
+    margin-right: 10px;
+}
+
+.home .home-btn-learn {
+    background: var(--mainColor);
+    color: var(--whiteColor);
+}

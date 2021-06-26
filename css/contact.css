@@ -1,0 +1,82 @@
+/*3.11- Contact Section*/
+.contact-content {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-item {
+    width: 30%;
+}
+
+.contact-item.mg {
+    margin: 0 5%;
+}
+
+.contact-item .icon {
+    color: var(--mainColor);
+}
+
+.contact-item-title {
+    margin: 15px 0;
+}
+
+.contact-item-text {
+    color: var(--grayColor);
+}
+
+.contact .contact-form {
+    text-align: center;
+}
+
+.contact-form-psinfo input {
+    width: 400px;
+    height: 40px;
+    margin: 0 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: none;
+    background-color: #E9E9E9;
+    border-bottom: 2px solid #b6b4b4;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 17px;
+    color: var(--grayColor);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--mainColor);
+    border-style: solid;
+    border-width: 1px 1px 3px 1px;
+}
+
+.contact-form input[placeholder="Subject"] {
+    display: block;
+    margin: 15px auto;
+    width: 820px;
+    height: 40px;
+
+}
+
+.contact-form textarea[placeholder="Message"] {
+    display: block;
+    margin: 15px auto;
+    width: 820px;
+    height: 80px;
+    resize: none;
+}
+
+.contact-form .btn-submit {
+    padding: 15px 20px;
+    border: none;
+    background: var(--mainColor);
+    color: var(--whiteColor);
+    border-radius: 3px;
+    margin-top: 25px;
+
+}
+
+

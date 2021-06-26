@@ -1,0 +1,47 @@
+
+/* 3.8- Testimonial-Section **/
+.testimonail {
+    position: relative;
+    height: 400px;
+    background-image: url('../images/background/background3.webp');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.testimonail-content {
+    padding: 120px 0;
+    width: 80%;
+    margin: auto;
+}
+
+.testimonail-item {
+    width: 50%;
+    color: var(--whiteColor);
+}
+
+.testimonail-item .testimonail-toplayer {
+    padding: 10px 2px 40px 100px;
+    position: relative;
+}
+
+/* لوضع صورة الشخص بجانب الاسم والمهنه */
+.testimonail-item .testimonail-toplayer img {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border-radius: 50%;
+}
+
+.testimonail-item-name {
+    margin: 5px 0;
+}
+
+.testimonail-item-work-title {
+    text-transform: uppercase;
+    color: var(--mainColor);
+}
+
+.testimonial-desc {
+    font-size: 17px;
+    line-height: 1.6;
+}

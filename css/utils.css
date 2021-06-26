@@ -1,0 +1,150 @@
+/* اي كلاس في هذا الملف سوف نضعة مباشرتا مع هي عنصر في ملف
+html 
+بعد استيراد الملف فيه */
+
+/* Margin Bottom ganeral style */
+.m-b-5 {
+    margin-bottom: 5px;
+}
+.m-b-10 {
+    margin-bottom: 10px;
+}
+.m-b-15 {
+    margin-bottom: 15px;
+}
+.m-b-20 {
+    margin-bottom: 20px;
+}
+.m-b-25 {
+    margin-bottom: 25px;
+}
+.m-y-20 {
+    margin: 20px 0;
+}
+.m-y-30 {
+    margin: 30px 0;
+}
+
+ /* Padding ganeral st */
+.p-d-5 {
+    padding: 5px;
+}
+.p-d-10 {
+    padding: 10px;
+}
+.p-d-15 {
+    padding: 15px;
+}
+.p-d-20 {
+    padding: 20px;
+}
+.p-d-25 {
+    padding: 25px;
+}
+
+.pd-y-20 {
+    padding: 20px 0;
+}
+.pd-y-25 {
+    padding: 25px 0;
+}
+.pd-y-30 {
+    padding: 30px 0;
+}
+.pd-y-35 {
+    padding: 35px 0;
+}
+.pd-y-40 {
+    padding: 40px 0;
+}
+
+.pd-y-45 {
+    padding: 45px 0;
+}
+.pd-y-50 {
+    padding: 50px 0;
+}
+.pd-y-55 {
+    padding: 55px 0;
+}
+.pd-y-60 {
+    padding: 20px 0;
+}
+
+.pd-y {
+    padding: 120px 0;
+}
+/* Text ganeral stayle */
+.upercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+/* End Text ganeral style  */
+
+/* Float ganaral style */
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/* Background Color ganaral style */
+.bg-gray {
+   background: #f9f9f9;; 
+}
+
+.bg-mainColor {
+    background-color: #6195FF;
+    
+}
+
+.bg-grayColor {
+    background-color: #999;
+}
+
+.bg-whiteColor {
+    background-color: #FFF;
+}
+
+.bg-blackColor {
+    background-color: #000;
+}
+
+/*Color ganaral style */
+.white-Gray {
+    color: #f9f9f9;
+}
+
+.main-Color {
+    color: #6195FF;
+}
+
+.gray {
+    color: #999;
+}
+
+.white {
+    color: #FFF;
+}
+
+.black {
+    color: #000;
+}
+
+
+/* containers Styles */
+
+/* main container */
+.container {
+    width: 80%;
+    /* لتوسيط اي عنصر بلوك */
+    margin: auto;
+}

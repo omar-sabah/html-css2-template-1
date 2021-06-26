@@ -1,0 +1,186 @@
+/* 
+   1- Gommon styles
+     -container
+     -overlay
+     -opacity 
+     -section header
+     -section padding
+     -hover effect 1 (left to right)
+     -hover effect 2 (top to bottom)
+   2- Genral Styles
+   3-Sections Styles
+     3.0- Header Section
+     3.1- Home Section 
+     3.2- About Section
+     3.3- Portifolio Section
+     3.4- Offer Section
+     3.5- Prices Section
+     3.6- Team Section
+     3.7- blog Page
+     3.8- Contact Section
+     3.9- Footer Section
+*/
+
+/* 1- Gommon styles */
+/* Main container */
+/* .container {
+    width: 80%;
+    margin: auto;
+}
+ */
+/* ذكرنا هذا الكلاس بدون الاب لانه سوف يطبق باكثر من مكان على الصفحة */
+.overlay {
+    /* نجعله كـ ابن للاب */
+    position: absolute;
+    /* يغطي جميع مساحة الاب */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* نستخدم هذا في التحكم باللون والشفافية */
+    background-color: rgba(0, 0, 0, .7);
+}
+
+/* الحل الاول للاباء الذين لا يتعرفون على الابناء الذين ياخذون فلوت */
+.clear {
+    clear: both;
+}
+
+/* عمل بطى بالافكت فقط على حالة الشفافية وليس على الجميع */
+.hover-opacity {
+    transition: opacity .5s;
+}
+
+.hover-opacity:hover {
+    opacity: 0.8;
+}
+
+/* عمل افكت الخلفية السوداء من اليسار الى اليمين */
+.ltr-effect,
+.tb-effect {
+    position: relative;
+}
+
+.ltr-effect::after,
+.tb-effect::after {
+    position: absolute;
+    content: "";
+    background-color: rgba(3, 3, 3, .7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+}
+
+.ltr-effect::after {
+    width: 0;
+    transition: width .5s;
+}
+
+/*عمل افكت الخلفية السوداء من الاعلى الى الاسفل */
+
+.tb-effect::after {
+    height: 0;
+    transition: height .5s;
+}
+
+/* عند عمل هوفر على الافكت اظهره */
+.ltr-effect:hover::after {
+    width: 100%;
+}
+
+
+/* عند عمل هوفر على الافكت اظهره */
+.tb-effect:hover::after {
+    height: 100%;
+}
+
+/* ########################################################################################################### */
+
+/*  2- Genral Styles  */
+:root {
+    --mainColor:#6195FF;
+    --grayColor:#999;
+    --bg-gray:#F9F9F9;
+    --whiteColor:#FFF;
+    --blackColor:#000;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    /* فائدتها عند اضافة بادنج او مارجن للعنصر لا يسمح بزيادة عرض العنصر عن العرض العام  */
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Varela Round', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* هذا كلاس جنرال بادنج نعطيه لمعظم السيكشنات */
+.pd-y {
+    padding: 120px 0;
+}
+
+.pd-y-60 {
+    padding: 60px 0;
+}
+
+.pd-y-30 {
+    padding: 30px 0;
+}
+
+/* هذا الجزء سوف يكرر في اكثرمن قسم في الصفحة  */
+.section-header {
+    text-align: center;
+}
+
+.section-header .section-title {
+    font-size: 35px;
+    text-transform: capitalize;
+}
+
+.section-header .line {
+    /* العنصر سبان فيجب تحويله الى بلوك */
+    display: block;
+    /*لتوسيط اي عنصر بلوك  */
+    margin: 0 auto 70px auto;
+    background-color: var(--mainColor);
+    height: 5px;
+    width: 60px;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* ########################################################################################################## */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

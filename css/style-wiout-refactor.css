@@ -1,0 +1,1032 @@
+/* 
+   1- Gommon styles
+     -container
+     -overlay
+     -opacity 
+     -section header
+     -section padding
+     -hover effect 1 (left to right)
+     -hover effect 2 (top to bottom)
+   2- Genral Styles
+   3-Sections Styles
+     3.0- Header Section
+     3.1- Home Section 
+     3.2- About Section
+     3.3- Portifolio Section
+     3.4- Offer Section
+     3.5- Prices Section
+     3.6- Team Section
+     3.7- blog Page
+     3.8- Contact Section
+     3.9- Footer Section
+*/ 
+
+/* 1- Gommon styles */
+/* Main container */
+.container {
+    width: 80%;
+
+    /* لتوسيط اي عنصر بلوك */
+    margin: auto;
+}
+
+/* ذكرنا هذا الكلاس بدون الاب لانه سوف يطبق باكثر من مكان على الصفحة */
+.overlay {
+    /* نجعله كـ ابن للاب */
+    position: absolute;
+    /* يغطي جميع مساحة الاب */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* نستخدم هذا في التحكم باللون والشفافية */
+    background-color: rgba(0, 0, 0, .7);
+}
+
+/* الحل الاول للاباء الذين لا يتعرفون على الابناء الذين ياخذون فلوت */
+.clear {
+    clear: both;
+}
+/* عمل بطى بالافكت فقط على حالة الشفافية وليس على الجميع */
+.hover-opacity {
+    transition: opacity .5s;
+}
+
+.hover-opacity:hover{
+    opacity: 0.8;
+}
+/* عمل افكت الخلفية السوداء من اليسار الى اليمين */
+.ltr-effect,
+.tb-effect {
+ position: relative;
+}
+.ltr-effect::after,
+.tb-effect::after {
+    position: absolute;
+    content: "";
+    background-color: rgba(3, 3, 3, .7); 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    
+}
+.ltr-effect::after {
+    width: 0;
+    transition: width .5s;
+}
+/*عمل افكت الخلفية السوداء من الاعلى الى الاسفل */
+
+.tb-effect::after {
+    height: 0;
+    transition: height .5s;
+}
+
+/* عند عمل هوفر على الافكت اظهره */
+.ltr-effect:hover::after {
+    width: 100%;
+}
+
+
+/* عند عمل هوفر على الافكت اظهره */
+.tb-effect:hover::after {
+    height: 100%;
+}
+
+/* ########################################################################################################### */
+
+/*  2- Genral Styles  */
+* {
+    margin: 0;
+    padding: 0;
+    /* فائدتها عند اضافة بادنج او مارجن للعنصر لا يسمح بزيادة عرض العنصر عن العرض العام  */
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Varela Round',sans-serif;
+}
+
+h1,h2,h3,h4 {
+   font-family: 'Montserrat',sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+/* هذا كلاس جنرال بادنج نعطيه لمعظم السيكشنات */
+.pd-y {
+    padding: 120px 0;
+}
+
+/* هذا الجزء سوف يكرر في اكثرمن قسم في الصفحة  */
+.section-header{
+    text-align: center;
+}
+
+.section-header .section-title {
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+.section-header .line {
+    /* العنصر سبان فيجب تحويله الى بلوك */
+    display: block;
+    /*لتوسيط اي عنصر بلوك  */
+    margin: 0 auto 70px auto;
+    background-color: #6195ff;
+    height: 5px;
+    width: 60px;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* ########################################################################################################## */
+/* 3-Sections Styles */
+/*  3.0- Header Section */
+.header {
+    /* background: gray;  */
+    /* position: fixed,absolute  يحولوا العنصرمن بلوك الى انلاين بلوك فينكمش العنر يحتاج نعطيه عرض مئة بالمئة */
+    position: fixed;
+    width: 100%;
+    /* هنا عنصر الهيدر اصبح خلف عنصر الهوم يجب اخراجه عليه */
+    z-index: 10;
+}
+
+/* الحل الثاني لمشكلة عدم تعرف الاب على ابناء الذين ياخذون فلوت */
+.header-content {
+   /*  overflow: hidden; */
+}
+
+.header .logo {
+    width: 40%;
+    float: left;
+}
+
+.header .logo img {
+    width: 20%;
+    margin-top: 10px;
+}
+.header .nav {
+    width: 60%;
+    float: left;
+    /* الغاء الستايل الديفلت من ul */
+    list-style: none;
+    text-align: right;
+}
+
+.header .nav > li {
+    display: inline-block;
+    /* width: 85px; */
+    text-align: right;
+    margin-right: 1px;
+
+}
+
+.header .nav > li > a {
+    text-decoration: none;
+    font-size: 15px;
+    color:#FFF;
+    /* لتشغيل الاعلى والاسفل في البادنج */
+    display: block;
+    padding: 30px 15px;
+}
+/* عمل افكت الخط الازرق عند التأشير على اي عنصر في القائمة */
+.header .nav > li > a.active:after,
+.header .nav > li > a:after{
+   content: "";
+   display: block; /* اهم نقطة لانة العناصر في الافتر وبالفور تكون انلاين يجب تحويلها حتى تظهر */
+   height: 3px; /* سمك الخط */
+   background-color: #6195ff;
+   margin-top: 2px;
+   transition: width .5s;
+}
+.header .nav>li > a:after{
+    width: 0;
+}
+/* نثبت الخط ديفلت لعنصر الهوم Home */
+.header .nav > li > a.active:after,
+.header .nav > li > a:hover:after {
+    width:100%; /* عرض الخط على عرض العنصر */
+}
+
+/* drop down list  */
+.dropdown{
+    position: relative;
+   
+}
+.dropdown .dropdown-menu {
+    position: absolute;
+    border: 1px solid #6195ff;
+    border-radius: 4px;
+    width: 110px;
+    text-align: center;
+    left: -36%;
+    top: 72%;
+    /* لاخفاء هذه القائمة عند اول التشغيل */
+    opacity: 0; /* لاخفاء العنصر */
+    visibility: hidden; /* لازالة مكانه المحجوز في الصفحة */
+    transition: opacity .5s , visibility .5s;
+}
+.dropdown-menu a{
+     display: block;
+    color: #FFF;
+    text-align: center;
+    padding: 10px;
+    transition: all .5s;
+}
+.dropdown-menu a:hover {
+    background: rgba(97, 149, 255,.7);
+    color: #FFF;
+}
+/* الاظهار القائمة الفرعية عند الوقوف على العنصر */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+/* 3.1- Home Section */
+
+.home {
+    /* نريد يمثل 100 بالمئة من المنظور الطولي للشاشة تبعك */
+    height: 100vh;
+    background-image: url(../images/background/background1.webp);
+    /* لتوسيط المحتوى كخلفية */
+    background-size: cover;
+    /* نجعله كـ اب */
+    position: relative;
+}
+
+ .home-content {
+    width: 65%; 
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  
+}
+.home-title {  
+    font-size: 3.5rem;
+    text-transform: uppercase;
+      color: #FFF;
+    
+}
+
+.home-description {
+    margin: 20px 0 ;
+    color: #FFF;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.home .btn {
+    min-width: 160px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.home .home-btn-start {
+    margin-right: 10px;
+}
+
+.home .home-btn-learn {
+ background: #6195ff;
+ color: #FFF;
+}
+
+
+/* 3.2- About Section */ 
+.about {
+
+}
+
+/* لكي يتعرف الاب على الابناء بعد اخذهم الفلوت */
+.about-content {
+    overflow: hidden;
+}
+
+ .about-item {
+    width: 30%;
+    float: left;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    padding: 50px 20px;
+}
+/* فقط العنصر الذي يأخذ الكلاس الملاصق وهو الوسطي */
+ .about-item.mg {
+/* لكي يترك مسافة 5 بالمئة بين العنصرين الاول والاخير وهي متممة ال التسعين بالمئة */
+margin: 0 5%;
+}
+
+.about-item .icon {
+    color: #6195ff;
+    margin-bottom: 10px;
+}
+.about-item-title {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    /* تأخير بنفس وقت الافكت الاصلي */
+    transition: color .5s;
+
+}
+/* من اعمل هوفر على العنصر الدف يتغير لون عنوان الدف */
+.about-item:hover .about-item-title {
+    color: #FFF;
+}
+
+.about-item-desc {
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #999;
+}
+
+.about-item-link {
+    color: #6195ff;
+    text-transform: capitalize;
+}
+
+
+/* 3.3- Portifolio Section */ 
+
+.portifolio {
+    background-color: #f9f9f9;
+}
+.portifolio-content {
+    overflow: hidden;
+}
+.portifolio-item {
+    width: 32%;
+    float: left;
+    margin-bottom: 25px;
+    position: relative;
+    padding: 20px;
+}
+.portifolio-item img {
+    width: 100%;
+}
+
+/* معناه اي عنصر فيه اسماء هذين الكلاسين */
+.portifolio-item.mg{
+    margin: 0 2%;
+}
+.portifolio-item .layer-content {
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+    /* هذا الكلاس يكون مخفي ولا يوجد له مكان الا حين التأشير على العنصر */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .7s,
+    visibility .7s;
+
+}
+.portifolio-item:hover .layer-content {
+    opacity: 1;
+    visibility: visible;
+}
+.layer-content .layer-info {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    text-align: center;
+}
+
+.layer-content .category {
+    display: block;
+    color : #6195ff;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    position: relative;
+    top : 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .5s,opacity .6s,visibility .6s;
+    transition-delay: .2s;    
+}
+.layer-content-title {
+    font-size: 20px;
+    color : #FFF;
+    margin-bottom: 10px;
+    position: relative;
+    top : 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .5s,
+    opacity .7s,
+    visibility .7s;
+    transition-delay: .3s;
+   
+}
+
+.layer-content a {
+    /* حتى العناصر تتراصف جنب بعض وتاخذ صفة بلوك */
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #6195ff;
+    position: relative;
+    top : 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .5s,
+    opacity .8s,
+    visibility .8s;
+    transition-delay: .4s;
+    
+
+}
+/* طريقة توسيط العنصر داخل عنصر اخر بشكل عمودي */
+.layer-content a i {
+    /* نفس حجم الطول للعنص الاب وهنا a */
+    line-height: 40px;
+    /* ممكن نختصر الكود اعلاه في 
+    /* حتى العناصر تتراصف جنب بعض وتاخذ صفة بلوك 
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #6195ff;
+    
+    */
+     color: #fff;
+}
+
+/* عمل افكت صعود عناصر المحتوى من الاسفل للاعلى بمقدار 10 بكسل */
+.portifolio-item:hover .layer-content .category,
+.portifolio-item:hover .layer-content-title,
+.portifolio-item:hover .layer-content a {
+    top :0;
+    opacity: 1;
+    visibility: visible;
+}
+/* 3.4-Offer Section */
+.offer {
+
+}
+.offer-content {
+    overflow: hidden;
+}
+.offer-item {
+    width: 30%;
+    float: left;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e8;
+    padding: 30px 15px 30px 70px;
+    position: relative;
+}
+
+.offer-item .icon {
+    position: absolute;
+    left: 15px;
+    top :35px
+}
+.offer-item.mg {
+    margin: 0 5%;
+}
+
+.offer-item-title {
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    transition: color .5s;
+}
+.offer-item-desc {
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    color: #999;
+    line-height: 1.6;
+    transition: color .5s;
+}
+.offer-item .icon {
+    color: #6195ff;
+    transition: color .5s;
+}
+
+.offer-item:hover .offer-item-title ,
+.offer-item:hover .icon,
+.offer-item:hover .offer-item-desc {
+    color:#F3F3F3;
+} 
+/* 3.4- Service Section */
+.service {
+ background-color: #f9f9f9;
+}
+
+.service-item {
+    width: 50%;
+    float:left;
+}
+
+.service-item .section-header {
+    text-align: left;
+}
+.service-item .section-header .line {
+    margin:0 0 50px 0;;
+}
+
+.sevice-item-desc {
+    padding-right: 20px;
+    color : #999;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+ .service-list {
+   list-style: none;
+}
+.service-list li{
+    margin-bottom: 10px;
+    color: #999;
+}
+.service-list li i {
+    border: 1px solid #6195ff;
+    color: #6195ff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+
+}
+
+.service-item-img img {
+    width: 100%;
+}
+
+.service-bollets {
+    list-style: none;
+    text-align: center;
+}
+
+.service-bollets li {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: #e8e8e8;
+    border-radius: 50%;
+    margin: 10px 5px ;
+    transition: background .5s;
+}
+.service-bollets li.active {
+    background: #6195ff;
+}
+
+.service-bollets li:hover {
+    background: #6195ff;
+}
+
+/* 3.5- number Section */
+.number {
+    /* بالنسبة لدف التغطية السوداء overlay  */
+   position: relative;
+   background-image: url('../images/background/background2.webp');
+   height: 300px;
+  /* هنا افكت تحريك الظل على طول الصورة */
+  /* هنا نضع الصورة بالكامل كخلفية للصحفة */
+  background-size: cover;
+  /* هنا يخلي الصحفة ثابتة والمرور عليها كسكرول */
+  background-attachment: fixed;
+
+}
+
+.numbers-item {
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.number-item {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+.number-item .icon {
+    color: #6195ff;
+    margin-bottom: 15px;
+}
+.number-item-title {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+}
+.number-item-text {
+      color: #fff;
+}
+
+/* 3.7- Pricing-Section */
+.pricing {
+ 
+}
+
+.pricing-plans {
+    /* حل مشكلة الفلوت للاباء */
+    overflow: hidden;
+}
+
+.pricing-item {
+    float: left;
+    width: 30%;
+    padding: 40px;
+    border: 1px solid #e8e8e8;
+    text-align: center;
+}
+ .pricing-item.mg {
+    margin: 0 5%;
+}
+
+.pricing-item-text {
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+    color: #999;
+   transition: color .5s;
+}
+
+.pricing-item-permonth {
+     width: 130px;
+     height: 130px;
+    /* لتوسيط المحتوى عاموديا  */
+    padding: 20px 0;
+    margin: 20px auto;
+    border: 2px solid #6195ff;
+    border-radius: 50%;    
+    transition: color .5s;
+}
+
+.pricing-item-permonth .dollar {
+    font-size: 50px;
+}
+
+.pricing-item-permonth .month {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+}
+.pricing-list {
+    list-style: none;
+   
+}
+
+.pricing-list li {
+    color : #999;
+    line-height: 1.8;
+   
+}
+.pricing-item-purchase {
+    border: 0;
+    background: none;
+    display: block;
+    width: 140px;
+    margin: 15px auto 0 auto;
+    padding: 10px;
+    border: 1px solid #6195ff;
+    color: #6195ff;
+    
+}
+
+
+.pricing-item:hover .pricing-item-permonth {
+    color:#FFF;
+}
+
+.pricing-item:hover .pricing-item-text {
+    color: #6195ff;
+}
+ 
+/**************************************** 3.8- Testimonail-Section *****************************************************/
+.testimonail {
+    position: relative;
+    height: 400px;
+    background-image: url('../images/background/background3.webp');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.testimonail-content {
+    overflow: hidden;
+    padding: 120px 0;
+    width: 80%;
+    margin: auto;
+}
+
+.testimonail-item {
+    width: 50%;
+    float: left;
+    color:#FFF;
+}
+
+.testimonail-item .testimonail-toplayer {
+   padding: 10px 2px 40px 100px;
+   position: relative;
+}
+
+/* لوضع صورة الشخص بجانب الاسم والمهنه */
+.testimonail-item .testimonail-toplayer img {
+position: absolute;
+   left: 10px;
+   top: 10px;
+   border-radius: 50%;
+}
+
+.testimonail-item-name {
+    margin: 5px 0;
+}
+
+.testimonail-item-work-title {
+    text-transform: uppercase;
+    color: #6195ff;
+}
+
+.testimoniai-desc {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/************************************************* 3.9- Team Section******************************************* */ 
+.team {
+   position: relative;
+}
+
+.team-content {
+    overflow: hidden;
+}
+
+.team-item {
+    width: 30%;
+    float: left;
+   background-color: #e8e8e8;
+   padding: 40px 20px;
+   text-align: center;
+  
+}
+
+/* الصورة كبيرة هنا سوف نصغر حاضنة الصورة */
+.team-item .team-item-img {
+    width: 90%;
+    /* لتوسيط الدف الحاضن بداخل الاب */
+    margin :auto;
+    position: relative;
+}
+/* هذه الطبقة السوداء التى تغطي حامل الصورة وكذلك تحمل عناصر وسائل التواصل */
+.team-item-img .team-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    background-color :rgba(0, 0, 0, .5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility  .5s;
+    
+}
+.team-overlay a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    /* لازاحة العناصر على اليمين */
+    margin-left: auto;
+    background-color: #6195ff;
+    color: #fff;
+}
+/* لتوسيط الايقونات بنفس حجم الاب */
+.team-overlay a i {
+    line-height: 40px;
+}
+
+/* نجعل الصورة تملاء الحاضنة */
+.team-item-img img {
+    width: 100%;
+}
+.team-item.mg {
+    margin: 0 5%;
+}
+
+.team-item-info .team-item-title {
+    color: #222;
+    margin: 10px 0;
+    transition: color .5s;
+}
+
+.team-item-info .team-item-text {
+  font-size: 14px;
+  color : #999;
+  text-transform: uppercase;
+  transition: color .5s;
+}
+
+/* لتشغيل افكت الصورة الداخلية حاملة وسائل التواصل */
+.team-item:hover .team-overlay,
+.team-item:hover .team-item-title
+ {
+    opacity: 1;
+    visibility: visible;
+    color: #FFF;
+}
+
+.team-item:hover .team-item-text {
+    color: #6195ff;
+}
+/* لاظهار افكت النزول من الاعلى */
+.team-item.tb-effect {
+    z-index: 1;
+}
+
+/* *************************************3.10- Blog-section************************************************  */ 
+
+.blog {
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.blog-content {
+    overflow: hidden;
+}
+.blog-item {
+    width: 30%;
+    float: left;
+    background-color: #FFF;
+    margin: auto;
+}
+.blog-item.mg {
+    margin: 0 5%;
+}
+.blog-item .blog-item-img {
+    margin: auto;
+}
+
+.blog-item .blog-item-img img {
+    width: 100%;
+}
+/* حاضنة البيانات في العنصر */
+.blog-item .blog-info {
+    padding: 20px;
+}
+.blog-item .blog-list {
+    list-style: none;
+    margin: 10px 0;
+}
+.blog-item .blog-list li{
+    display: inline-block;
+    margin :0 5px;
+    
+}
+.blog-item .blog-list li i {
+    color:#6195ff;
+     padding-right: 3px; 
+    
+}
+
+.blog-item .blog-title {
+    /* font-size: 17px; */
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.blog-item .blog-desc {
+    line-height: 1.6;
+   /*  font-size: 14px; */
+    color :#999;
+    margin-bottom: 10px;
+}
+
+.blog-item .blog-link {
+    /* display: block;
+    text-transform: capitalize;
+    font-size: 17px; */
+    color : #6195ff;
+    /* padding: 10px 10px 20px 10px; */
+}
+
+/****************************************************** 3.11- Contact Section ******************************************/ 
+
+.contact {
+ 
+}
+
+.contact-content {
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+ .contact-item {
+     width: 30%;
+     float: left;
+}
+ .contact-item.mg{
+     margin: 0 5%;
+ }
+
+ .contact-item .icon {
+     color: #6195ff;
+ }
+
+ .contact-item-title {
+     margin: 15px 0;
+ }
+.contact-item-text {
+    color: #999;
+}
+.contact .contact-form {
+    text-align: center;
+}
+ .contact-form-psinfo input {
+    width: 400px;
+    height: 40px;
+    margin:0 5px;
+ }
+.contact-form input,
+.contact-form textarea {
+    border: none;
+    background-color: #E9E9E9;
+    border-bottom: 2px solid #b6b4b4;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 17px;
+    color: #999;
+ }
+
+ .contact-form input:focus,
+ .contact-form textarea:focus {
+    outline: none;
+    border-color: #6195ff;
+    border-style: solid;
+    border-width: 1px 1px 3px 1px;
+ }
+ .contact-form input[placeholder="Subject"] {
+     display: block;
+     margin: 15px auto;
+     width: 820px;
+     height: 40px;
+     
+ }
+ .contact-form textarea[placeholder="Message"] {
+    display: block;
+    margin: 15px auto;
+    width: 820px;
+    height: 80px;
+    resize: none;
+ }
+
+ .contact-form .btn-submit {
+    padding: 15px 20px;
+    border: none;
+    background: #6195ff;
+    color: #FFF;
+    border-radius: 3px;
+    margin-top: 25px;
+
+ }
+
+/* ***************************************3.12- Footer Section**************************************** */
+
+.footer {
+    background-color: #1c1d21;
+    text-align: center;
+    padding: 60px 0;
+   
+}
+
+ .footer-links {
+    list-style: none;
+    margin: 20px auto; 
+}
+
+.footer-links li {
+   display: inline-block; 
+}
+
+.footer-links li a {
+   display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #6195ff;
+    color: #FFF;
+    border-radius: 50%;
+    margin:20px 5px;
+
+}
+
+.footer-links li a i {
+    line-height: 50px;
+}
+
+.copyright {
+    color: #999;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.copyright span {
+    color: #6195ff;
+}

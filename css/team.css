@@ -1,0 +1,90 @@
+/* 3.9- Team-Section */
+.team {
+    position: relative;
+}
+
+.team-content {}
+
+.team-item {
+    width: 30%;
+    background-color: #e8e8e8;
+    padding: 40px 20px;
+    text-align: center;
+
+}
+
+/* الصورة كبيرة هنا سوف نصغر حاضنة الصورة */
+.team-item .team-item-img {
+    width: 90%;
+    /* لتوسيط الدف الحاضن بداخل الاب */
+    margin: auto;
+    position: relative;
+}
+
+/* هذه الطبقة السوداء التى تغطي حامل الصورة وكذلك تحمل عناصر وسائل التواصل */
+.team-item-img .team-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    background-color: rgba(0, 0, 0, .5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
+
+}
+
+.team-overlay a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    /* لازاحة العناصر على اليمين */
+    margin-left: auto;
+    background-color: var(--mainColor);
+    color: var(--whiteColor);
+}
+
+/* لتوسيط الايقونات بنفس حجم الاب */
+.team-overlay a i {
+    line-height: 40px;
+}
+
+/* نجعل الصورة تملاء الحاضنة */
+.team-item-img img {
+    width: 100%;
+}
+
+.team-item.mg {
+    margin: 0 5%;
+}
+
+.team-item-info .team-item-title {
+    color: #222;
+    margin: 10px 0;
+    transition: color .5s;
+}
+
+.team-item-info .team-item-text {
+    font-size: 14px;
+    color: var(--grayColor);
+    text-transform: uppercase;
+    transition: color .5s;
+}
+
+/* لتشغيل افكت الصورة الداخلية حاملة وسائل التواصل */
+.team-item:hover .team-overlay,
+.team-item:hover .team-item-title {
+    opacity: 1;
+    visibility: visible;
+    color: var(--whiteColor);
+}
+
+.team-item:hover .team-item-text {
+    color: var(--mainColor);
+}
+
+/* لاظهار افكت النزول من الاعلى */
+.team-item.tb-effect {
+    z-index: 1;
+}

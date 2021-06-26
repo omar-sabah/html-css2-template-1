@@ -1,0 +1,44 @@
+/* 3.2- About Section */
+.about {}
+
+/* لكي يتعرف الاب على الابناء بعد اخذهم الفلوت */
+.about-content {}
+
+.about-item {
+    width: 30%;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    padding: 50px 20px;
+}
+
+/* فقط العنصر الذي يأخذ الكلاس الملاصق وهو الوسطي */
+.about-item.mg {
+    /* لكي يترك مسافة 5 بالمئة بين العنصرين الاول والاخير وهي متممة ال التسعين بالمئة */
+    margin: 0 5%;
+}
+
+.about-item .icon {
+    color: var(--mainColor);
+}
+
+.about-item-title {
+    text-transform: capitalize;
+    /* تأخير بنفس وقت الافكت الاصلي */
+    transition: color .5s;
+
+}
+
+/* من اعمل هوفر على العنصر الدف يتغير لون عنوان الدف */
+.about-item:hover .about-item-title {
+    color: var(--whiteColor);
+}
+
+.about-item-desc {
+    line-height: 1.5;
+    color: var(--grayColor);
+}
+
+.about-item-link {
+    color: var(--mainColor);
+    text-transform: capitalize;
+}
